@@ -8,6 +8,10 @@ First of all, you will have to import the library into the file where you are op
 import Validator from '.validator';
 ```
 
+# Example
+
+![example](https://github.com/gocanto/js-validator/blob/master/example.gif)
+
 
 # Validation rules array
 
