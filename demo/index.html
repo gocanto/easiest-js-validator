@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>easiest-js-validator - demo</title>
+	<meta charset="utf-8">
+	<meta name="description" content="JS form validator.">
+	<meta name="author" content="Gustavo Ocanto - gustavoocanto@gmail.com">
+	<meta http-equiv="Content-Language" content="en" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/6925802621.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+      <div class="page-header">
+        <h1>The easiest way to validate your forms without 3rd party packages</h1>
+      </div>
+
+      <div class="col-md-6">
+
+      	<form class="form-horizontal" role="form" @submit.prevent="submit">
+                <div class="form-group" v-bind:class = "{ 'has-error': hasError('first_name')  }">
+                    <label class="col-sm-3 control-label">First Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="First Name"
+                            v-model = "profile.first_name">
+                        <span class="help-block" v-if = "hasError('first_name')">{{ errors.first_name }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group" v-bind:class = "{ 'has-error': hasError('last_name')  }">
+                    <label class="col-sm-3 control-label">Last Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="Last Name"
+                            v-model = "profile.last_name">
+
+                        <span class="help-block" v-if = "hasError('last_name')" >{{ errors.last_name }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group" v-bind:class = "{ 'has-error': hasError('email')  }">
+                    <label class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" placeholder="Email"
+                            v-model = "profile.email">
+
+                        <span class="help-block" v-if = "hasError('email')">{{ errors.email }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group" v-bind:class = "{ 'has-error': hasError('url')  }">
+                    <label class="col-sm-3 control-label">Profile URL</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="Profile URL"
+                            v-model = "profile.url">
+
+                        <span class="help-block" v-if = "hasError('url')">{{ errors.url }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group" v-bind:class = "{ 'has-error': hasError('numeric')  }">
+                    <label class="col-sm-3 control-label">Numeric</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="Numeric"
+                            v-model = "profile.numeric">
+
+                        <span class="help-block" v-if = "hasError('numeric')">{{ errors.numeric }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group" v-bind:class = "{ 'has-error': hasError('integer')  }">
+                    <label class="col-sm-3 control-label">Integer</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="Integer"
+                            v-model = "profile.integer">
+
+                        <span class="help-block" v-if = "hasError('integer')">{{ errors.integer }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group" v-bind:class = "{ 'has-error': hasError('alphaNum')  }">
+                    <label class="col-sm-3 control-label">Alpha Num</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="Alpha Num"
+                            v-model = "profile.alphaNum">
+
+                        <span class="help-block" v-if = "hasError('alphaNum')">{{ errors.alphaNum }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">&nbsp;</div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+      </div>
+</div>
+
+<script src="dist/easiest-js-validator.js"></script>
+
+</body>
+</html>
