@@ -1,5 +1,6 @@
 # Easiest JS Validator
 
+<a href="https://gocanto.github.io/easiest-js-validator/"><img src="https://img.shields.io/badge/online-demo-green.svg" alt="Demo"></a>
 <a href="https://www.npmjs.com/package/easiest-js-validator"><img src="https://img.shields.io/npm/v/easiest-js-validator.svg" alt="Version"></a>
 <a href="https://www.npmjs.com/package/easiest-js-validator"><img src="https://img.shields.io/npm/dt/easiest-js-validator.svg" alt="Downloads"></a>
 <a href="https://github.com/gocanto/easiest-js-validator/blob/development/LICENSE.md"><img src="https://img.shields.io/npm/l/easiest-js-validator.svg" alt="License"></a>
