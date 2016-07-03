@@ -6,6 +6,9 @@
 
 It is a simple library ready to pull in into your project. Its goal is to provide an easy way to validate HTML forms without the headache of adapting any other complicated packages. Also, it was written in es2015, so you can get your feet wet with this amazing new way of working with JS.
 
+# Installation
+To install this package you just need to open your console line and type ```npm i easiest-js-validator```. If there is a problem during the installation, you can try again using the ```force param``` as so ```npm i -f easiest-js-validator```
+
 
 # Gettings started
 First of all, you will have to import the library into the file where you are operating. As so,
