@@ -1,5 +1,9 @@
 # Easiest JS Validator
 
+<a href="https://www.npmjs.com/package/easiest-js-validator"><img src="https://img.shields.io/npm/v/easiest-js-validator.svg" alt="Version"></a>
+<a href="https://www.npmjs.com/package/easiest-js-validator"><img src="https://img.shields.io/npm/dt/easiest-js-validator.svg" alt="Downloads"></a>
+<a href="https://github.com/gocanto/easiest-js-validator/blob/development/LICENSE.md"><img src="https://img.shields.io/npm/l/easiest-js-validator.svg" alt="License"></a>
+
 It is a simple library ready to pull in into your project. Its goal is to provide an easy way to validate HTML forms without the headache of adapting any other complicated packages. Also, it was written in es2015, so you can get your feet wet with this amazing new way of working with JS.
 
 
