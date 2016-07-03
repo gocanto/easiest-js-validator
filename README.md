@@ -134,7 +134,7 @@ You will be able to validate you forms againts any of this rules:
 
 
 # Summary
-In spite of it was written in vuejs, you will be able to pull in the validator class under any other js framework 
+In spite of the demo was written in vuejs, you will be able to pull in the ```validator class under any other js framework``` 
 
 If you have any question, shoot me an email. I will be glad of helping you out.
 
