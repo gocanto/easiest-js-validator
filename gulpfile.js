@@ -5,5 +5,5 @@ elixir.config.assetsPath = 'src';
 
 elixir(function(mix)
 {
-	mix.browserify('index.js', 'dist/easiest-js-validator.js');
+	mix.browserify('demo.js', 'dist/easiest-js-validator.js');
 });

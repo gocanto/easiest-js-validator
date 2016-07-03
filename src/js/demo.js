@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Validator from './validator.js'
+import Validator from 'easiest-js-validator';
 
 window.Vue = Vue;
 
