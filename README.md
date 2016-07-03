@@ -1,5 +1,9 @@
 # Easiest JS Validator
 
+<a href="https://www.npmjs.com/package/easiest-js-validator"><img src="https://img.shields.io/npm/v/easiest-js-validator.svg" alt="Version"></a>
+<a href="https://www.npmjs.com/package/easiest-js-validator"><img src="https://img.shields.io/npm/dt/easiest-js-validator.svg" alt="Downloads"></a>
+<a href="https://github.com/gocanto/easiest-js-validator/blob/development/LICENSE.md"><img src="https://img.shields.io/npm/l/easiest-js-validator.svg" alt="License"></a>
+
 It is a simple library ready to pull in into your project. Its goal is to provide an easy way to validate HTML forms without the headache of adapting any other complicated packages. Also, it was written in es2015, so you can get your feet wet with this amazing new way of working with JS.
 
 
@@ -15,6 +19,9 @@ Take a look at the <a href="https://github.com/gocanto/easiest-js-validator/blob
 # illustration
 
 ![example](https://github.com/gocanto/easiest-js-validator/blob/development/src/images/demo.gif)
+
+
+Also, you will be able to see the online <a href="https://gocanto.github.io/easiest-js-validator/" target="_blank">DEMO</a>
 
 
 # Validation rules array
@@ -104,7 +111,7 @@ if (hasError('first_name')) {
 
 ```
 
-You can see the demo on <a href="https://github.com/gocanto/easiest-js-validator/tree/development/src/js" target="_blank">DEMO</a>
+You can see the demo on <a href="https://gocanto.github.io/easiest-js-validator/" target="_blank">DEMO</a>
 
 
 # Features
@@ -127,4 +134,23 @@ In spite of it was written in vuejs, you will be able to pull in the validator c
 
 If you have any question, shoot me an email. I will be glad of helping you out.
 
-Email: gustavoocanto@gmail.com
+# Contributing
+
+Please feel free to fork this package and contribute by submitting a pull request to enhance the functionalities.
+
+
+# License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+
+# How can I thank you?
+Why not star the github repo? I'd love the attention! Why not share the link for this repository on Twitter? Spread the word!
+
+
+Don't forget to [follow me on twitter](https://twitter.com/gocanto)!
+
+Thanks!
+
+Gustavo Ocanto.
+gustavoocanto@gmail.com
