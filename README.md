@@ -17,6 +17,9 @@ Take a look at the <a href="https://github.com/gocanto/easiest-js-validator/blob
 ![example](https://github.com/gocanto/easiest-js-validator/blob/development/src/images/demo.gif)
 
 
+Also, you will be able to see the online <a href="https://gocanto.github.io/easiest-js-validator/" target="_blank">DEMO</a>
+
+
 # Validation rules array
 
 This array contains all the information about the form fields that you want to be validated where its keys are the same as your form object, As so:
@@ -104,7 +107,7 @@ if (hasError('first_name')) {
 
 ```
 
-You can see the demo on <a href="https://github.com/gocanto/easiest-js-validator/tree/development/src/js" target="_blank">DEMO</a>
+You can see the demo on <a href="https://gocanto.github.io/easiest-js-validator/" target="_blank">DEMO</a>
 
 
 # Features
@@ -127,4 +130,23 @@ In spite of it was written in vuejs, you will be able to pull in the validator c
 
 If you have any question, shoot me an email. I will be glad of helping you out.
 
-Email: gustavoocanto@gmail.com
+# Contributing
+
+Please feel free to fork this package and contribute by submitting a pull request to enhance the functionalities.
+
+
+# License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+
+# How can I thank you?
+Why not star the github repo? I'd love the attention! Why not share the link for this repository on Twitter? Spread the word!
+
+
+Don't forget to [follow me on twitter](https://twitter.com/gocanto)!
+
+Thanks!
+
+Gustavo Ocanto.
+gustavoocanto@gmail.com
