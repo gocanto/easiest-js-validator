@@ -84,7 +84,7 @@ messages: {
 
 # If there were errors
 
-If there were errors, you will have an associative array using reference the exactly field that does not me the rules. as so,
+If there were errors, you will have an associative array using how reference the exactly field that does not meet the rules. as so,
 
 ```js
 errors = [
