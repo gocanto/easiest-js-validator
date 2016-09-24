@@ -1,6 +1,6 @@
 {
   "name": "easiest-js-validator",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "JS form validator",
   "main": "src/js/index.js",
   "scripts": {
@@ -14,14 +14,11 @@
   "author": "Gustavo Ocanto",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.10.1",
-    "babel-preset-es2015": "^6.9.0",
     "vue": "^1.0.26",
-    "laravel-elixir": "^5.*",
+    "laravel-elixir": "6.0.0-11",
+    "laravel-elixir-vue": "^0.1.4",
+    "laravel-elixir-webpack-official": "^1.0.2",
     "gulp": "^3.*",
     "gulp-notify": "^2.*"
-  },
-  "dependencies": {
-    "easiest-js-validator": "^1.0.1"
   }
 }
