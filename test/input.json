@@ -1,0 +1,37 @@
+{
+	"data": {
+			"integer": "32",
+			"numeric": "1.2",
+			"alpha": "Gustavo",
+			"dateISO": "1984-10-18",
+			"alphaNum": "Gustavo123",
+			"url": "http://g-ocanto.com",
+			"email": "gustavoocanto@gmail.com",
+			"blank": "Making sure there is some data in this field!",
+			"required": "I just wanted to practice a little bit of testing in JS!"
+	},
+
+	"rules": {
+		"url": "url",
+		"alpha": "alpha",
+		"blank": "blank",
+		"dateISO": "dateISO",
+		"numeric": "numeric",
+		"integer": "integer",
+		"alphaNum": "alphaNum",
+		"required": "required",
+		"email": "required,email"
+	},
+
+	"messages": {
+		"url": "The field format is invalid.",
+		"numeric": "The field must be a number.",
+		"integer": "The field must be an integer.",
+		"required": "The field field is required.",
+		"alpha": "The field may only contain letters.",
+		"email": "The field must be a valid email address.",
+		"dateISO": "Please enter a valid date with a ISO format.",
+		"alphaNum": "The field may only contain letters and numbers.",
+		"blank": "The field is required and does not allow a blank space."
+	}
+}

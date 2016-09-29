@@ -179,6 +179,25 @@ class Validator
 	{
 		return value && value.length == +arg;
 	}
+
+	/**
+	 * Check whether the values has a blank value.
+	 * @param string value
+	 * @return boolean
+	 */
+	blank(value)
+	{
+		return value && value.trim() !== "";
+	}
+
+	/**
+	 * Check whether the values has IOS date format.
+	 * @param string value
+	 * @return boolean
+	 */
+	dateISO(value) {
+		return (/^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/).test(value);
+	}
 }
 
 module.exports = Validator;

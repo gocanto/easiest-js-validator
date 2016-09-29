@@ -1,10 +1,17 @@
 {
   "name": "easiest-js-validator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "JS form validator",
-  "main": "src/js/index.js",
+  "main": "dist/easiest-js-validator.js",
+  "license": "MIT",
+  "homepage": "https://github.com/gocanto/easiest-js-validator",
   "scripts": {
-    "prepublish": "gulp"
+    "prepublish": "gulp",
+    "test": "mocha --require babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gocanto/easiest-js-validator"
   },
   "keywords": [
     "js",
@@ -12,13 +19,13 @@
     "validator"
   ],
   "author": "Gustavo Ocanto",
-  "license": "MIT",
   "devDependencies": {
-    "vue": "^1.0.26",
+    "babel-register": "^6.16.0",
+    "gulp": "^3.*",
+    "gulp-notify": "^2.*",
     "laravel-elixir": "6.0.0-11",
     "laravel-elixir-vue": "^0.1.4",
     "laravel-elixir-webpack-official": "^1.0.2",
-    "gulp": "^3.*",
-    "gulp-notify": "^2.*"
+    "vue": "^1.0.26"
   }
 }
