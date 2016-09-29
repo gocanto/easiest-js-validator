@@ -94,6 +94,28 @@
                     </div>
                 </div>
 
+                <div class="form-group" v-bind:class = "{ 'has-error': hasError('blank')  }">
+                    <label class="col-sm-3 control-label">Blank</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="Blank"
+                            v-model = "profile.blank">
+
+                        <span class="help-block" v-if = "hasError('blank')">{{ errors.blank }}</span>
+                    </div>
+                </div>
+
+                <div class="form-group" v-bind:class = "{ 'has-error': hasError('dateISO')  }">
+                    <label class="col-sm-3 control-label">date (ISO)</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="dateISO"
+                            v-model = "profile.dateISO">
+
+                        <span class="help-block" v-if = "hasError('dateISO')">{{ errors.dateISO }}</span>
+                    </div>
+                </div>
+
+
+
                 <div class="form-group">
                     <div class="col-sm-offset-3 col-sm-9">&nbsp;</div>
                 </div>
