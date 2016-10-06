@@ -1,3 +1,4 @@
+require('laravel-elixir-vue-2');
 var elixir = require('laravel-elixir');
 
 elixir.config.sourcemaps = false;

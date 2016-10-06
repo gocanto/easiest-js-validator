@@ -5,7 +5,7 @@ window.Vue = Vue;
 
 new Vue({
 
-	el: 'body',
+	el: '#demo',
 
 	data:
 	{
