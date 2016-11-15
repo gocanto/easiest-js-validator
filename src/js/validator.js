@@ -63,7 +63,14 @@ class Validator
 	evaluate(methods, field)
 	{
 		let value = this.data[field];
-
+		let isRequired = (methods.indexOf('required') != -1);
+		
+		// if the rule required does not exist
+		// and the field empty don't validate
+		if(! isRequired && this.empty(value)) {
+			return;
+		}
+		
 		for (let method in methods) {
 			//if the rule required exits and there was an error, the
 			//stack errors method is called to keep track of rules
@@ -89,6 +96,15 @@ class Validator
 	}
 
 	/**
+	 * blank rule.
+	 * @param string value
+	 * @return boolean
+	 */
+	empty(value) {
+		return ((value == null) || (value.length == 0));
+	}
+	
+	/**
 	 * No blank fields.
 	 * @param string value
 	 * @return boolean
@@ -97,7 +113,7 @@ class Validator
 		if (typeof value == 'boolean')
 			return value;
 
-		return !((value == null) || (value.length == 0));
+		return ! this.empty(value);
 	}
 
 	/**
