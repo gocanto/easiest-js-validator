@@ -5,6 +5,7 @@
 			"alpha": "Gustavo",
 			"dateISO": "1984-10-18",
 			"alphaNum": "Gustavo123",
+			"phone": "(123) 456-7890",
 			"url": "http://g-ocanto.com",
 			"email": "gustavoocanto@gmail.com",
 			"blank": "Making sure there is some data in this field!",
@@ -20,6 +21,7 @@
 		"integer": "integer",
 		"alphaNum": "alphaNum",
 		"required": "required",
+		"phone": "required,phone",
 		"email": "required,email"
 	},
 
@@ -32,6 +34,7 @@
 		"email": "The field must be a valid email address.",
 		"dateISO": "Please enter a valid date with a ISO format.",
 		"alphaNum": "The field may only contain letters and numbers.",
+		"phone": "The field does not have a valid phone number format.",
 		"blank": "The field is required and does not allow a blank space."
 	}
 }

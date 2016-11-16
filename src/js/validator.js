@@ -8,8 +8,10 @@ class Validator
 {
 	/**
 	 * Create a new instance.
-	 * @param object data
-	 * @param object rules
+	 *
+	 * @param {Object} data
+	 * @param {Object} rules
+	 * @param {Object} messages
 	 */
 	constructor(data, rules, messages)
 	{
@@ -28,8 +30,10 @@ class Validator
 
 	/**
 	 * Create a new static instance.
-	 * @param object data
-	 * @param object rules
+	 *
+	 * @param {Object} data
+	 * @param {Object} rules
+	 * @param {Object} messages
 	 */
 	static make(data, rules, messages)
 	{
@@ -40,7 +44,8 @@ class Validator
 
 	/**
 	 * Walk through the validations rules.
-	 * @returns void
+	 *
+	 * @returns {Object}
 	 */
 	handle()
 	{
@@ -56,21 +61,20 @@ class Validator
 
 	/**
 	 * Evaluate the input against rules.
-	 * @param methods
-	 * @param value
-	 * @returns array
+	 *
+	 * @param {Array} methods
+	 * @param {String} field
+	 * @returns {Array}
 	 */
 	evaluate(methods, field)
 	{
 		let value = this.data[field];
-		let isRequired = (methods.indexOf('required') != -1);
-		
-		// if the rule required does not exist
-		// and the field empty don't validate
-		if(! isRequired && this.empty(value)) {
+
+		//We return if the rule required does not exist and the field value is empty.
+		if (this.isNotRequired(methods, value)) {
 			return;
 		}
-		
+
 		for (let method in methods) {
 			//if the rule required exits and there was an error, the
 			//stack errors method is called to keep track of rules
@@ -85,8 +89,27 @@ class Validator
 	}
 
 	/**
-	 * keep errors tracked out.
-	 * @param data
+	 * Check whether a field is not required and has an empty value.
+	 *
+	 * @param {Array} methods
+	 * @param {String} value
+	 * @return {Boolean}
+	 */
+	isNotRequired(methods, value)
+	{
+		//if the rule required does not exist and the field value is empty.
+		if ((methods.indexOf('required') === -1) && this.empty(value)) {
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Keep errors tracked out.
+	 *
+	 * @param {Object} data
+	 * @return {Void}
 	 */
 	stackErrors(data)
 	{
@@ -96,20 +119,24 @@ class Validator
 	}
 
 	/**
-	 * blank rule.
-	 * @param string value
-	 * @return boolean
+	 * Check whether the field is blank.
+	 *
+	 * @param {String} value
+	 * @return {Boolean}
 	 */
-	empty(value) {
-		return ((value == null) || (value.length == 0));
+	empty(value)
+	{
+		return value == null || value.length == 0 || value.trim() == '';
 	}
-	
+
 	/**
 	 * No blank fields.
-	 * @param string value
-	 * @return boolean
+	 *
+	 * @param {String} value
+	 * @return {Boolean}
 	 */
-	required(value) {
+	required(value)
+	{
 		if (typeof value == 'boolean')
 			return value;
 
@@ -118,8 +145,9 @@ class Validator
 
 	/**
 	 * Numeric rule.
-	 * @param string value
-	 * @return boolean
+	 *
+	 * @param {String} value
+	 * @return {Boolean}
 	 */
 	numeric(value)
 	{
@@ -128,8 +156,9 @@ class Validator
 
 	/**
 	 * Integer rule.
-	 * @param string value
-	 * @return boolean
+	 *
+	 * @param {String} value
+	 * @return {Boolean}
 	 */
 	integer(value)
 	{
@@ -138,8 +167,9 @@ class Validator
 
 	/**
 	 * Digits rule.
-	 * @param string value
-	 * @return boolean
+	 *
+	 * @param {String} value
+	 * @return {Boolean}
 	 */
 	digits(value)
 	{
@@ -148,8 +178,9 @@ class Validator
 
 	/**
 	 * Alpha rule.
-	 * @param string value
-	 * @return boolean
+	 *
+	 * @param {String} value
+	 * @return {Boolean}
 	 */
 	alpha(value)
 	{
@@ -158,8 +189,9 @@ class Validator
 
 	/**
 	 * Alpha num rule.
-	 * @param string value
-	 * @return boolean
+	 *
+	 * @param {String} value
+	 * @return {Boolean}
 	 */
 	alphaNum(value)
 	{
@@ -168,8 +200,9 @@ class Validator
 
 	/**
 	 * Emails rule.
-	 * @param string value
-	 * @return boolean
+	 *
+	 * @param {String} value
+	 * @return {Boolean}
 	 */
 	email(value)
 	{
@@ -178,8 +211,9 @@ class Validator
 
 	/**
 	 * Url rule.
-	 * @param string value
-	 * @return boolean
+	 *
+	 * @param {String} value
+	 * @return {Boolean}
 	 */
 	url(value)
 	{
@@ -188,8 +222,9 @@ class Validator
 
 	/**
 	 * Length rule.
-	 * @param string value
-	 * @return boolean
+	 *
+	 * @param {String} value
+	 * @return {Boolean}
 	 */
 	length(value)
 	{
@@ -198,8 +233,9 @@ class Validator
 
 	/**
 	 * Check whether the values has a blank value.
-	 * @param string value
-	 * @return boolean
+	 *
+	 * @param {String} value
+	 * @return {Boolean}
 	 */
 	blank(value)
 	{
@@ -208,11 +244,34 @@ class Validator
 
 	/**
 	 * Check whether the values has IOS date format.
-	 * @param string value
-	 * @return boolean
+	 *
+	 * @param {String} value
+	 * @return {Boolean}
 	 */
-	dateISO(value) {
+	dateISO(value)
+	{
 		return (/^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/).test(value);
+	}
+
+	/**
+	 * Check whether a given value has a valid US phone number format.
+	 *
+	 * @param {String} value
+	 * @return {Boolean}
+	 */
+	phone(value)
+	{
+		/*
+		| ----------------------------------------------------------
+		| VALID FORMATS
+		| ----------------------------------------------------------
+		|
+		| 123-456-7890, (123) 456-7890, 123 456 7890
+		| 123.456.7890, +91 (123) 456-7890
+		|
+		*/
+
+		return (/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/).test(value);
 	}
 }
 

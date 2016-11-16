@@ -114,6 +114,16 @@
                     </div>
                 </div>
 
+                <div class="form-group" v-bind:class = "{ 'has-error': hasError('phone')  }">
+                    <label class="col-sm-3 control-label">Phone Number</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" placeholder="phone"
+                            v-model = "profile.phone">
+
+                        <span class="help-block" v-if = "hasError('phone')">{{ errors.phone }}</span>
+                    </div>
+                </div>
+
 
 
                 <div class="form-group">

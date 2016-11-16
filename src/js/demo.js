@@ -18,6 +18,7 @@ new Vue({
 			numeric: 'numeric',
 			blank: 'required,blank',
 			email: 'required,email',
+			phone: 'required,phone',
 			last_name: 'required,alpha',
 			first_name: 'required,alpha',
 			alphaNum: 'required,alphaNum'
@@ -32,7 +33,8 @@ new Vue({
 			'email': 'The field must be a valid email address.',
 			'dateISO': 'Please enter a valid date with a ISO format.',
 			'alphaNum': 'The field may only contain letters and numbers.',
-			'blank': 'The field is required and does not allow blank spaces.',
+			'phone': 'The field does not have a valid phone number format.',
+			'blank': 'The field is required and does not allow blank spaces.'
 		}
 	},
 
