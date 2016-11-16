@@ -132,6 +132,9 @@ You will be able to validate you forms againts any of this rules:
 * required
 * digits
 * length
+* blank
+* dateISO
+* phoneNumber
 
 
 # Summary
