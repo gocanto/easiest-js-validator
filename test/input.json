@@ -9,7 +9,10 @@
 			"url": "http://g-ocanto.com",
 			"email": "gustavoocanto@gmail.com",
 			"blank": "Making sure there is some data in this field!",
-			"required": "I just wanted to practice a little bit of testing in JS!"
+			"required": "I just wanted to practice a little bit of testing in JS!",
+			"length": "43",
+			"min": "3",
+			"max": "1234567891011"
 	},
 
 	"rules": {
@@ -17,8 +20,8 @@
 		"alpha": "alpha",
 		"blank": "blank",
 		"dateISO": "dateISO",
-		"numeric": "numeric",
-		"integer": "integer",
+		"numeric": "numeric,length,3",
+		"integer": "integer,min,3,max,10",
 		"alphaNum": "alphaNum",
 		"required": "required",
 		"phone": "required,phone",
