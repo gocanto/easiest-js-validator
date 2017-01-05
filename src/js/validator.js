@@ -74,17 +74,18 @@ class Validator
 		if (this.isNotRequired(methods, value)) {
 			return;
 		}
-
+		let index = 0;
 		for (let method in methods) {
 			//if the rule required exits and there was an error, the
 			//stack errors method is called to keep track of rules
 			//that did not pass the validation.
-			if (this[methods[method]] && ! this[methods[method]](value)) {
+			if (this[methods[method]] && ! this[methods[method]](value, methods[index+1])) {
 				this.stackErrors({
 					key: field, //evaluated field.
 					error: this.messages[methods[method]]
 				});
 			}
+			index++;
 		}
 	}
 
@@ -224,11 +225,37 @@ class Validator
 	 * Length rule.
 	 *
 	 * @param {String} value
+	 * @param {String} nextArg
 	 * @return {Boolean}
 	 */
-	length(value)
+	length(value, nextArg)
 	{
-		return value && value.length == +arg;
+		return value && value.length == +nextArg;
+	}
+
+
+	/**
+	 * Length, bigger than
+	 *
+	 * @param {String} value
+	 * @param {String} nextArg
+	 * @return {Boolean}
+	 */
+	min(value, nextArg)
+	{
+		return value && value.length >= +nextArg;
+	}
+
+	/**
+	 * Length, smaller than
+	 *
+	 * @param {String} value
+	 * @param {String} nextArg
+	 * @return {Boolean}
+	 */
+	max(value, nextArg)
+	{
+		return value && value.length < +nextArg;
 	}
 
 	/**

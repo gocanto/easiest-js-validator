@@ -14,8 +14,8 @@ new Vue({
 		rules: {
 			url: 'url',
 			dateISO: 'dateISO',
-			integer: 'integer',
-			numeric: 'numeric',
+			integer: 'integer,min,3,max,10',
+			numeric: 'numeric,length,3',
 			blank: 'required,blank',
 			email: 'required,email',
 			phone: 'required,phone',
@@ -34,7 +34,10 @@ new Vue({
 			'dateISO': 'Please enter a valid date with a ISO format.',
 			'alphaNum': 'The field may only contain letters and numbers.',
 			'phone': 'The field does not have a valid phone number format.',
-			'blank': 'The field is required and does not allow blank spaces.'
+			'blank': 'The field is required and does not allow blank spaces.',
+			'length': 'The field is required and has to be exactly this length.',
+			'min': 'The field is required and has to have at least amount of 3 symbols.',
+			'max': 'The field is required and can not be longer than 10 symbols.'
 		}
 	},
 
