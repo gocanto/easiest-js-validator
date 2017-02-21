@@ -137,9 +137,18 @@ class Validator
 	 */
 	required(value)
 	{
-		if (typeof value == 'boolean')
+		//We return if the value happens to be a boolean one,
+		//like a checkbox or something similar.
+		if (typeof value == 'boolean') {
 			return value;
+		}
 
+		//If the value happens to be an object, we check whether it has some keys in it.
+		if (typeof value == 'object') {
+			return Object.keys(value).length > 0;
+		}
+
+		//If the values is a string, we check whether it has empty spaces and return.
 		return ! this.empty(value);
 	}
 
