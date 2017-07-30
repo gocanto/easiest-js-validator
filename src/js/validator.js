@@ -82,7 +82,7 @@ class Validator
 			if (this[methods[method]] && ! this[methods[method]](value)) {
 				this.stackErrors({
 					key: field, //evaluated field.
-					error: this.messages[methods[method]]
+					error: this.messages[field]
 				});
 			}
 		}
